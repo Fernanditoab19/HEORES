@@ -1,0 +1,36 @@
+<div *ngIf="hero">
+    <!-- Esta sección solo se mostrará si existe un héroe -->
+    
+    <!-- Muestra el nombre del héroe en mayúsculas -->
+    <h2>Detalles: {{hero.name | uppercase}} </h2>
+    
+    <!-- Muestra el ID del héroe -->
+    <div><span>id: </span>{{hero.id}}</div>
+    
+    <!-- Campo para editar el nombre del héroe -->
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    </div>
+</div>
+
+<!-- Encabezado para la lista de héroes -->
+<h2>My Heroes</h2>
+
+<!-- Lista de héroes -->
+<ul class="heroes">
+  <!-- Itera sobre cada héroe en la lista -->
+  <li *ngFor="let hero of heroes">
+    <!-- Botón para seleccionar un héroe -->
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <!-- Muestra el ID del héroe -->
+      <span class="badge">{{hero.id}}</span>
+      
+      <!-- Muestra el nombre del héroe -->
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<!-- Componente para mostrar los detalles del héroe seleccionado -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
