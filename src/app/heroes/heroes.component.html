@@ -1,0 +1,24 @@
+<h2>ARMAS</h2> <!-- Encabezado de la página -->
+
+<div> <!-- Contenedor del formulario para agregar un nuevo héroe -->
+  <label for="new-hero">NOMBRE DE ARMAS: </label> <!-- Etiqueta del input -->
+  <input id="new-hero" #heroName /> <!-- Input para ingresar el nombre del nuevo héroe -->
+
+  <!-- Botón para agregar un nuevo héroe -->
+  <!-- (click) pasa el valor del input a la función add() y luego limpia el input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+     Añadir </button>
+</div>
+
+<ul class="heroes"> <!-- Lista de héroes -->
+  <!-- Itera sobre cada héroe en el arreglo de héroes -->
+  <li *ngFor="let hero of heroes">
+    <!-- Enlace a la ruta de detalle del héroe -->
+    <a routerLink="/detail/{{hero.id}}">
+      <!-- Muestra el id y el nombre del héroe -->
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <!-- Botón para eliminar el héroe -->
+    <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
+  </li>
+</ul>

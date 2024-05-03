@@ -1,0 +1,24 @@
+/* Estilos CSS privados del AppComponent */
+
+h1 {
+  margin-bottom: 0; /* Margen inferior del título */
+}
+
+nav a {
+  padding: 1rem; /* Espaciado interno de los enlaces */
+  text-decoration: none; /* Quita la decoración de subrayado de los enlaces */
+  margin-top: 10px; /* Margen superior de los enlaces */
+  display: inline-block; /* Muestra los enlaces en línea */
+  background-color: #e8e8e8; /* Color de fondo de los enlaces */
+  color: #3d3d3d; /* Color del texto de los enlaces */
+  border-radius: 4px; /* Radio de borde de los enlaces */
+}
+
+nav a:hover {
+  color: white; /* Color del texto de los enlaces al pasar el cursor */
+  background-color: #42545C; /* Color de fondo de los enlaces al pasar el cursor */
+}
+
+nav a.active {
+  background-color: black; /* Color de fondo de los enlaces activos */
+}
