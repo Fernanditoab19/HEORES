@@ -1,6 +1,6 @@
 // Importa la clase Hero desde el archivo './hero'
 import { Hero } from './hero';
-
+//Definicion de un Arreglo constante de objestos de tipo Hero
 export const HEROES: Hero[] = [
     { id: 1, name: 'Vorágine V-15', descripcion: 'Fusil de asalto con alta cadencia de fuego y precisión a larga distancia.'},
     { id: 2, name: 'Martillo M-22:', descripcion: 'Metralleta compacta y ligera, ideal para combate urbano debido a su maniobrabilidad.' },
