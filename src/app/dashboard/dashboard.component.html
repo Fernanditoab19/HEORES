@@ -1,0 +1,10 @@
+<h2>Top de Armas</h2> <!-- Encabezado del dashboard -->
+
+<div class="heroes-menu"> <!-- Contenedor de los enlaces a los héroes -->
+  <!-- Utiliza un bucle ngFor para iterar sobre la lista de héroes y generar enlaces -->
+  <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+    {{hero.name}} <!-- Muestra el nombre del héroe -->
+  </a>
+</div>
+
+<app-hero-search></app-hero-search> <!-- Componente de búsqueda de héroes -->
